@@ -227,15 +227,5 @@ export default {
   },
   plugins: [],
 }
-```
-
-### .env
-```bash
-VITE_API_BASE_URL=http://localhost:5000/api
-VITE_APP_NAME=Milkr
-VITE_APP_VERSION=1.0.0
-# Mapbox token is required for address autocomplete and reverse geocoding.
-# Add your Mapbox public token below (do NOT commit secrets):
-# VITE_MAPBOX_TOKEN=pk.your_mapbox_token_here
-```
+````
 

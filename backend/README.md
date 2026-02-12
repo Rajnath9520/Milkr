@@ -4,15 +4,15 @@ Complete RESTful API for Milk Delivery Management System built with Node.js, Exp
 
 ## 📋 Features
 
-- ✅ **User Authentication** - JWT-based secure authentication
-- ✅ **Customer Management** - CRUD operations for customers
-- ✅ **Milk Records** - Daily delivery tracking
-- ✅ **Billing System** - Automated billing and invoice generation
-- ✅ **Analytics Dashboard** - Comprehensive analytics and reports
-- ✅ **Role-Based Access** - Admin, Manager, and Delivery staff roles
-- ✅ **Payment Tracking** - Track paid and pending payments
-- ✅ **Area-wise Management** - Organize deliveries by area
-- ✅ **Performance Metrics** - Delivery staff performance tracking
+- **User Authentication** - JWT-based secure authentication
+- **Customer Management** - CRUD operations for customers
+- **Milk Records** - Daily delivery tracking
+- **Billing System** - Automated billing and invoice generation
+- **Analytics Dashboard** - Comprehensive analytics and reports
+- **Role-Based Access** - Admin, Manager, and Delivery staff roles
+- **Payment Tracking** - Track paid and pending payments
+- **Area-wise Management** - Organize deliveries by area
+- **Performance Metrics** - Delivery staff performance tracking
 
 ## 🚀 Quick Start
 
@@ -38,21 +38,17 @@ npm install
 3. **Configure environment variables**
 ```bash
 cp .env.example .env
-# Edit .env with your configuration
 ```
 
 4. **Start MongoDB**
 ```bash
-# If using local MongoDB
 mongod
 ```
 
 5. **Run the server**
 ```bash
-# Development mode with auto-reload
 npm run dev
 
-# Production mode
 npm start
 ```
 
@@ -87,7 +83,7 @@ milkr-backend/
 All protected routes require a JWT token in the Authorization header:
 
 ```
-Authorization: Bearer <your-jwt-token>
+Authorization: Bearer <jwt-token>
 ```
 
 ### Getting Started
@@ -239,7 +235,6 @@ CORS_ORIGIN=http://localhost:5173
 
 For multiple origins:
 ```javascript
-// In server.js
 app.use(cors({
   origin: ['http://localhost:5173', 'https://yourdomain.com'],
   credentials: true
@@ -256,8 +251,8 @@ app.use(cors({
   "user": {
     "id": "65abc123def456789",
     "username": "john_doe",
-    "email": "john@example.com",
-    "fullName": "John Doe",
+    "email": "abcd@example.com",
+    "fullName": "XYZ",
     "role": "delivery"
   }
 }
@@ -285,44 +280,9 @@ app.use(cors({
 }
 ```
 
-## 🚀 Deployment
-
-### Deploy to Render
-
-1. Push code to GitHub
-2. Create new Web Service on Render
-3. Connect your repository
-4. Set environment variables
-5. Deploy!
-
-**Build Command:** `npm install`  
-**Start Command:** `npm start`
-
-### Deploy to Railway
-
-```bash
-railway login
-railway init
-railway up
-```
-
-### Deploy to Heroku
-
-```bash
-heroku create milkr-api
-git push heroku main
-heroku config:set MONGODB_URI=your_mongodb_uri
-heroku config:set JWT_SECRET=your_jwt_secret
-```
 
 ## 🧪 Testing
 
-### Using Postman
-
-1. Import the API collection (coming soon)
-2. Set environment variables
-3. Run authentication requests first
-4. Use the token for protected routes
 
 ### Using cURL
 
@@ -382,21 +342,7 @@ kill -9 <PID>
 | JWT_EXPIRE | Token expiration time | No | 7d |
 | CORS_ORIGIN | Allowed CORS origin | No | * |
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 📧 Support
-
-For support, email support@milkr.com or create an issue on GitHub.
 
 ## 🎉 Acknowledgments
 

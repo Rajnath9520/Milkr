@@ -5,7 +5,11 @@
 [![React](https://img.shields.io/badge/React-18.2-blue)](https://react.dev)
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green)](https://nodejs.org)
 [![MongoDB](https://img.shields.io/badge/MongoDB-5.0+-brightgreen)](https://mongodb.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+
+![Login](<Screenshot 2026-02-12 132705.png>)
+![Dashboard](<Screenshot 2026-02-12 132511.png>)
+![Delivery](<Screenshot 2026-02-12 132543.png>)
+![Billing](<Screenshot 2026-02-12 132602.png>)
 
 ## 🌟 Features
 
@@ -193,12 +197,12 @@ GET /api/analytics/forecast
 ### Add New Customer
 ```javascript
 const customer = {
-  name: "John Doe",
+  name: "abcd",
   phone: "9876543210",
-  address: "123 Main Street",
-  area: "Downtown",
+  address: "123 bilaspur Chhattisgarh",
+  area: "Koni",
   milkPerDay: 2,
-  location: { lat: 21.2514, lng: 81.6296 }
+  location: { lat: ....., lng: ..... }
 };
 
 const response = await customerAPI.create(customer);
@@ -208,7 +212,7 @@ const response = await customerAPI.create(customer);
 ```javascript
 const record = {
   customerId: "65abc123...",
-  date: "2025-01-10",
+  date: "XXXX-XX-XX",
   litres: 2,
   status: "Delivered"
 };
@@ -258,90 +262,7 @@ console.log(billing.summary.totalRevenue);
 - **XSS Protection** - React's built-in escaping
 - **Rate Limiting** - API request throttling (optional)
 
-## 🌐 Deployment
 
-### Frontend - Netlify
-```bash
-cd frontend
-npm run build
-netlify deploy --prod --dir=dist
-```
-
-### Backend - Render
-1. Push to GitHub
-2. Connect Render to your repo
-3. Add environment variables
-4. Deploy!
-
-### Database - MongoDB Atlas
-1. Create free cluster
-2. Whitelist IP addresses
-3. Get connection string
-4. Update backend .env
-
-## 📊 Database Schema
-
-### Customer
-```javascript
-{
-  name: String,
-  phone: String,
-  address: String,
-  area: String,
-  milkPerDay: Number,
-  pricePerLitre: Number,
-  location: { lat: Number, lng: Number },
-  status: Enum['Active', 'Inactive'],
-  createdAt: Date
-}
-```
-
-### MilkRecord
-```javascript
-{
-  customerId: ObjectId,
-  date: Date,
-  litres: Number,
-  status: Enum['Delivered', 'Pending', 'Cancelled'],
-  deliveredBy: ObjectId,
-  pricePerLitre: Number,
-  totalAmount: Number,
-  paymentStatus: Enum['Paid', 'Pending']
-}
-```
-
-### User
-```javascript
-{
-  username: String,
-  email: String,
-  password: String (hashed),
-  role: Enum['admin', 'delivery', 'manager'],
-  fullName: String,
-  isActive: Boolean
-}
-```
-
-## 🧪 Testing
-
-### Run Tests
-```bash
-# Backend tests
-cd backend
-npm test
-
-# Frontend tests
-cd frontend
-npm test
-```
-
-### Test Coverage
-- Unit tests for utilities
-- Integration tests for API
-- Component tests with React Testing Library
-- E2E tests with Cypress (optional)
-
-## 🔧 Configuration
 
 ### Backend Environment Variables
 ```env
@@ -359,13 +280,6 @@ VITE_APP_NAME=Milkr
 VITE_APP_VERSION=1.0.0
 ```
 
-## 📈 Performance
-
-- **Lighthouse Score**: 95+
-- **First Contentful Paint**: < 1.5s
-- **Time to Interactive**: < 3s
-- **Bundle Size**: < 200KB (gzipped)
-- **API Response Time**: < 100ms avg
 
 ## 🐛 Known Issues
 
@@ -412,28 +326,8 @@ We welcome contributions! Please follow these steps:
 
 ## 👥 Team
 
-- **Your Name** - Full Stack Developer
-- **Contributors** - See [CONTRIBUTORS.md](CONTRIBUTORS.md)
+- **Rajnath Singh Tomar** - Full Stack Developer
 
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🙏 Acknowledgments
-
-- React team for amazing framework
-- Tailwind CSS for beautiful utilities
-- MongoDB for flexible database
-- Recharts for data visualization
-- Lucide for beautiful icons
-- All open-source contributors
-
-## 📧 Contact & Support
-
-- **Email**: support@milkr.com
-- **Website**: https://milkr.app
-- **GitHub Issues**: [Report a bug](https://github.com/yourusername/milkr/issues)
-- **Discord**: [Join our community](https://discord.gg/milkr)
 
 ## ⭐ Show Your Support
 
@@ -443,4 +337,4 @@ If you like this project, please give it a ⭐ on GitHub!
 
 **Built with ❤️ for making milk delivery management easier**
 
-© 2025 Milkr. All rights reserved.
+© 2026 Milkr. All rights reserved.
