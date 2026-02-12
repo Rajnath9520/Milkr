@@ -98,7 +98,7 @@ milkr/
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/milkr.git
+git clone https://github.com/Rajnath9520/milkr.git
 cd milkr
 ```
 
