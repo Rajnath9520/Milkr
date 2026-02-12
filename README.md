@@ -6,10 +6,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-16+-green)](https://nodejs.org)
 [![MongoDB](https://img.shields.io/badge/MongoDB-5.0+-brightgreen)](https://mongodb.com)
 
-![Login](<Screenshot 2026-02-12 132705.png>)
-![Dashboard](<Screenshot 2026-02-12 132511.png>)
-![Delivery](<Screenshot 2026-02-12 132543.png>)
-![Billing](<Screenshot 2026-02-12 132602.png>)
+
 
 ## 🌟 Features
 
@@ -34,14 +31,10 @@
 
 ## 🎨 Screenshots
 
-### Dashboard
-![Dashboard](https://via.placeholder.com/800x450/3B82F6/ffffff?text=Dashboard+View)
-
-### Customer Management
-![Customers](https://via.placeholder.com/800x450/06B6D4/ffffff?text=Customer+Management)
-
-### Analytics
-![Analytics](https://via.placeholder.com/800x450/10B981/ffffff?text=Analytics+Dashboard)
+![Login](<Screenshot 2026-02-12 132705.png>)
+![Dashboard](<Screenshot 2026-02-12 132511.png>)
+![Delivery](<Screenshot 2026-02-12 132543.png>)
+![Billing](<Screenshot 2026-02-12 132602.png>)
 
 ## 🏗️ Tech Stack
 
