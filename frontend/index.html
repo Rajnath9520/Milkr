@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="stylesheet" href="./index.css">
+    
+    <!-- Responsive Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Milkr - Fresh Milk Delivery Management System. Manage your milk delivery business effortlessly with real-time tracking, billing, and analytics." />
+    <meta name="keywords" content="milk delivery, dairy management, milk tracking, billing system" />
+    <meta name="author" content="Milkr Team" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Milkr - Milk Delivery Management" />
+    <meta property="og:description" content="Manage your milk delivery business with ease" />
+    <meta property="og:url" content="https://milkr.app" />
+    <meta property="og:image" content="/og-image.png" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Milkr - Milk Delivery Management" />
+    <meta name="twitter:description" content="Manage your milk delivery business with ease" />
+    <meta name="twitter:image" content="/twitter-image.png" />
+    
+    <!-- Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-title" content="Milkr" />
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    
+    <!-- Page Title -->
+    <title>Milkr - Fresh Milk Delivery Management System</title>
+  </head>
+
+  <body>
+    <noscript>
+      <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; flex-direction: column; gap: 20px;">
+        <h1>JavaScript is required to run Milkr</h1>
+        <p>Please enable JavaScript in your browser to continue.</p>
+      </div>
+    </noscript>
+
+    <div id="root">
+      <!-- Loading Screen-->
+      <div class="loading-screen">
+        <div class="loading-container">
+          <div class="loading-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/>
+            </svg>
+          </div>
+          <div class="loading-text">Milkr</div>
+          <div class="loading-subtext">Fresh & Pure Milk Delivery</div>
+          <div class="loading-spinner"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      // Hide loading screen once React loads
+      document.addEventListener('DOMContentLoaded', () => {
+        setTimeout(() => {
+          const loadingScreen = document.querySelector('.loading-screen');
+          if (loadingScreen) {
+            loadingScreen.style.display = 'none';
+          }
+        }, 2000);
+      });
+
+      // Prevent double-tap zoom on mobile
+      document.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 1) {
+          e.preventDefault();
+        }
+      }, false);
+
+      // Register service worker for PWA (optional)
+      if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker
+              .register('/sw.js')
+              .then(reg => {
+                console.log('Service Worker registered:', reg.scope);
+              })
+              .catch(err => {
+                console.error('Service Worker registration failed:', err);
+              });
+          });
+        }
+
+    </script>
+  </body>
+</html>
